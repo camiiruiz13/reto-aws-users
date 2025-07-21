@@ -5,5 +5,5 @@ import com.aws.ccamilo.com.app.retoawsusers.domain.model.Users;
 public interface IUsersRepositorieFacade {
 
     Users save(Users users);
-    Users findByidentificacion(String identificacion);
+    Users findByIdentification(String identificacion);
 }
