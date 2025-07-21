@@ -1,5 +1,6 @@
-package com.aws.ccamilo.com.app.retoawsusers.dto.request;
+package com.aws.ccamilo.com.app.retoawsusers.dto.response;
 
+import com.aws.ccamilo.com.app.retoawsusers.commons.annotations.FieldMapping;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Value;
 
@@ -10,7 +11,10 @@ import java.io.Serializable;
  */
 @Value
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserDTO implements Serializable {
+public class UsersDTOResponse implements Serializable {
+
+    @FieldMapping("id")
+    Long idUsers;
     String identificacion;
     String nombre;
     String email;

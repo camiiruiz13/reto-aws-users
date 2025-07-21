@@ -2,11 +2,10 @@ package com.aws.ccamilo.com.app.retoawsusers.facade.impl;
 
 import com.aws.ccamilo.com.app.retoawsusers.commons.constast.ErrorException;
 import com.aws.ccamilo.com.app.retoawsusers.domain.model.Users;
-import com.aws.ccamilo.com.app.retoawsusers.exception.EntityMappingException;
 import com.aws.ccamilo.com.app.retoawsusers.exception.UserNotFoundException;
 import com.aws.ccamilo.com.app.retoawsusers.exception.UserPersistenceException;
 import com.aws.ccamilo.com.app.retoawsusers.facade.IUsersRepositorieFacade;
-import com.aws.ccamilo.com.app.retoawsusers.repositorie.UsersRepository;
+import com.aws.ccamilo.com.app.retoawsusers.repositories.UsersRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
