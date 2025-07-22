@@ -16,7 +16,8 @@ public enum ErrorException {
     USER_PERSISTENCE_ERROR_MESSAGE("Ocurrió un error al guardar o actualizar el usuario en la base de datos."),
     USER_QUERY_ERROR_MESSAGE("Usuario no encontrado con identificador: "),
     USER_QUERY_SUCCESS_MESSAGE ("Consulta exitosa."),
-    USER_REGISTERED_SUCCESS_MESSAGE("Se ha registrado el usuario exitosamente.");
+    USER_REGISTERED_SUCCESS_MESSAGE("Se ha registrado el usuario exitosamente."),
+    USER_WITH_IDENTIFICATION_EXISTS("El usuario con identificación %s ya existe.");
 
     private final String message;
 

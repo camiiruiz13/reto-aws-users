@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class RetoAwsUsersApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(RetoAwsUsersApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(RetoAwsUsersApplication.class, args);
+	}
 
 }

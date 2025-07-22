@@ -1,17 +1,19 @@
 package com.aws.ccamilo.com.app.retoawsusers.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Value;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.io.Serializable;
 
 /**
  * DTO for {@link com.aws.ccamilo.com.app.retoawsusers.domain.model.Users}
  */
-@Value
+@Data
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UsersDTORequest implements Serializable {
-    String identificacion;
-    String nombre;
-    String email;
+    private String identificacion;
+    private String nombre;
+    private String email;
 }

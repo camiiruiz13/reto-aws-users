@@ -3,7 +3,6 @@ package com.aws.ccamilo.com.app.retoawsusers.commons.mapper;
 import com.aws.ccamilo.com.app.retoawsusers.commons.annotations.FieldMapping;
 import com.aws.ccamilo.com.app.retoawsusers.exception.EntityMappingException;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -11,9 +10,9 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component
+
 @Slf4j
-public final class EntityDTOBuilder {
+public  class EntityDTOBuilder {
 
     private EntityDTOBuilder() {
         throw new UnsupportedOperationException("Utility class");
