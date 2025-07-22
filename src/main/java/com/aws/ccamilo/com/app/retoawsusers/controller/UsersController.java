@@ -21,12 +21,14 @@ public class UsersController {
 
     @PostMapping
     public ResponseEntity<SuccesResponseDTO> save(@RequestBody UsersDTORequest request) {
+        log.info("Ingreso al servicio de guardar users");
         usersService.saveUser(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(new SuccesResponseDTO(ErrorException.USER_REGISTERED_SUCCESS_MESSAGE.getMessage(), null));
     }
 
     @GetMapping(EndPointApi.GET_USERS)
     public ResponseEntity<SuccesResponseDTO> findByIdentity(@PathVariable String identity) {
+        log.info("Ingreso al servicio de filtrar por identities", identity);
         return ResponseEntity.status(HttpStatus.OK).body(new SuccesResponseDTO(ErrorException.USER_QUERY_SUCCESS_MESSAGE.getMessage(), usersService.findByIdentifier(identity)));
     }
 }

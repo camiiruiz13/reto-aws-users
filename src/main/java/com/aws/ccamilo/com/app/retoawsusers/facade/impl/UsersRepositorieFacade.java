@@ -23,6 +23,7 @@ public class UsersRepositorieFacade implements IUsersRepositorieFacade {
     @Override
     public Users save(Users users) {
         try {
+            log.info("save user {}", users);
             usersRepository.findByIdentificacion(users.getIdentificacion()).ifPresent(existing ->{
                 throw new UserAlreadyExistsException(ErrorException.USER_WITH_IDENTIFICATION_EXISTS.getMessage() + users.getIdentificacion() + " ya existe.");
             });
@@ -37,6 +38,7 @@ public class UsersRepositorieFacade implements IUsersRepositorieFacade {
     @Override
     public Users findByIdentification(String identificacion) {
         try {
+            log.info("ingreso a consultar");
             return usersRepository.findByIdentificacion(identificacion)
                     .orElseThrow(()-> new UserNotFoundException(ErrorException.USER_QUERY_ERROR_MESSAGE.getMessage() + identificacion));
         }catch (UserNotFoundException e) {
