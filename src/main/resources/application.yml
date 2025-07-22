@@ -1,3 +1,17 @@
 spring:
   application:
     name: reto-aws-users
+
+  datasource:
+    url: jdbc:postgresql://reto-aws-postgres.c81w4ge4st5v.us-east-1.rds.amazonaws.com:5432/retoawspostgres
+    username: camidev
+    password: Admin123!
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
